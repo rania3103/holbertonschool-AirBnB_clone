@@ -3,8 +3,6 @@
 instances to a JSON file and deserializes
 JSON file to instances"""
 import json
-from models.base_model import BaseModel
-
 
 class FileStorage:
     """this is the class FileStorage"""
@@ -35,6 +33,7 @@ class FileStorage:
         (only if the JSON file (__file_path) exists
         otherwise, do nothing. If the file doesn’t exist
         no exception should be raised)"""
+        from models.base_model import BaseModel
         try:
             with open(self.__file_path, 'r') as f:
                 dict = json.load(f)
