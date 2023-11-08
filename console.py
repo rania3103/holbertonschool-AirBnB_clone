@@ -19,6 +19,7 @@ class HBNBCommand(cmd.Cmd):
     def do_emptyline(self, line):
         """an empty line + ENTER shouldn’t execute anything"""
         pass
+
     def help_quit(self):
         """help quit"""
         print("Quit command to exit the program\n")
