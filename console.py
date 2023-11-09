@@ -4,6 +4,7 @@ the entry point of the command interpreter"""
 import cmd
 from models.base_model import BaseModel
 from models import storage
+from models.user import User
 
 
 class HBNBCommand(cmd.Cmd):
@@ -116,7 +117,6 @@ class HBNBCommand(cmd.Cmd):
                         inst = obj_dict[key]
                         setattr(inst, args[2], args[3])
                         inst.save()
-    
 
 
 if __name__ == '__main__':
