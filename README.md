@@ -18,7 +18,7 @@ Do you remember the Shell? It’s exactly the same but limited to a specific use
     *Destroy an object
 
 <div align="center">
-  <img src="images/img.png" width="100%">
+  <img src="images/img2.png" width="100%">
 </div>
 
 ## [Usage](https://via.placeholder.com/10/00b48a?text=+)💻
