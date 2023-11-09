@@ -15,7 +15,7 @@ from models.review import Review
 class HBNBCommand(cmd.Cmd):
     """this is the class"""
     prompt = "(hbnb) "
-
+    classes= ["BaseModel", "User", "Place", "State", "City", "Amenity", "Review"]
     def do_quit(self, line):
         """exit the program"""
         return True
@@ -38,10 +38,10 @@ class HBNBCommand(cmd.Cmd):
         args = line.split(" ")
         if len(line) < 1:
             print("** class name missing **")
-        elif args[0] != "BaseModel":
+        elif args[0] not in self.classes:
             print("** class doesn't exist **")
         else:
-            inst = BaseModel()
+            inst = eval(args[0])()
             inst.save()
             print(inst.id)
 
@@ -52,7 +52,7 @@ class HBNBCommand(cmd.Cmd):
 
         if len(line) < 1:
             print("** class name missing **")
-        elif args[0] != "BaseModel":
+        elif args[0] not in self.classes:
             print("** class doesn't exist **")
         elif len(args) == 1:
             print("** instance id missing **")
@@ -70,7 +70,7 @@ class HBNBCommand(cmd.Cmd):
 
         if len(line) < 1:
             print("** class name missing **")
-        elif args[0] != "BaseModel":
+        elif args[0] not in self.classes:
             print("** class doesn't exist **")
         elif len(args) == 1:
             print("** instance id missing **")
@@ -87,7 +87,7 @@ class HBNBCommand(cmd.Cmd):
         """Prints all string representation of
         all instances based on the class name or not"""
         args = line.split(" ")
-        if len(line) == 2 and args[0] != "BaseModel":
+        if len(line) == 2 and args[0] not in self.classes:
             print("** class doesn't exist **")
         else:
             obj_dict = storage.all()
@@ -101,7 +101,7 @@ class HBNBCommand(cmd.Cmd):
 
         if len(line) < 1:
             print("** class name missing **")
-        elif args[0] != "BaseModel":
+        elif args[0] not in self.classes:
             print("** class doesn't exist **")
         elif len(args) == 1:
             print("** instance id missing **")
