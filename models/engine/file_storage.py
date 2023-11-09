@@ -5,7 +5,6 @@ JSON file to instances"""
 import json
 from models.user import User
 
-
 class FileStorage:
     """this is the class FileStorage"""
     __file_path = "file.json"
