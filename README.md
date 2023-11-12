@@ -26,6 +26,7 @@ Do you remember the Shell? It’s exactly the same but limited to a specific use
 ```bash
 ./console.py
 ```
+![Screen Recording](images/console.gif)
 ### [Prerequisites](https://via.placeholder.com/10/00b48a?text=+)
 
 - Python 3.x
