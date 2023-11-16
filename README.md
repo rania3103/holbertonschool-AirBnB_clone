@@ -87,7 +87,7 @@ $
 
 
 
-## [Our files](https://via.placeholder.com/10/00b48a?text=+) 📁
+## [files](https://via.placeholder.com/10/00b48a?text=+) 📁
 
 ```
    - AUTHORS: contributors to the project
